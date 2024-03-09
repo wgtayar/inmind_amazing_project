@@ -3,6 +3,11 @@ from torch.utils.data import Dataset, DataLoader
 from PIL import Image, ImageDraw
 import os
 import json
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+from torchvision.io import read_image
+from torchvision.datasets import ImageFolder
+from torchvision import transforms
 
 class LoadingBMWDataset(Dataset):
     # Constructor, initializing the paths and transform 
@@ -34,7 +39,48 @@ class LoadingBMWDataset(Dataset):
             sample = self.transform(sample)
         
         return sample
+    # Get the sample
+    # def __getitem__(self, idx):
+    #     img_path = os.path.join(self.images_dir, self.images[idx])
+    #     label_path = os.path.join(self.labels_dir, self.images[idx].replace('.jpg', '.json'))
+        
+    #     # Load image
+    #     image = Image.open(img_path).convert("RGB")
+        
+    #     # Load labels
+    #     with open(label_path) as f:
+    #         annotations = json.load(f)
+        
+    #     # Transform the sample to a dictionary containing the image and labels
+    #     sample = {'image': image, 'annotations': annotations}
+    #     if self.transform:
+    #         sample = self.transform(sample)
+        
+    #     return sample
 
+# Loading images and labels from the directory
+images_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/images'
+labels_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/labels/json'
+dataset = LoadingBMWDataset(images_dir, labels_dir)
+
+train_dataset, val_dataset = train_test_split(dataset, test_size=0.2, random_state=42)
+train_dataloader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+test_dataloader = DataLoader(val_dataset, batch_size=64, shuffle=True)
+
+train_features, train_labels = next(iter(train_dataloader))
+print('ok')
+# print(f"Feature batch shape: {train_features.size()}")
+# print(f"Labels batch shape: {train_labels.size()}")
+# img = train_features[0].squeeze()
+# label = train_labels[0]
+# plt.imshow(img, cmap="gray")
+# plt.show()
+# print(f"Label: {label}")
+
+'''
+####################################################################################################################
+###COMMENTING THIS SECTION OUT TO AVOID RUNNING THE CODE WHEN IMPORTING, UNCOMMENT TO VISUALIZE IMAGES AND LABELS###
+####################################################################################################################
 # Function to visualize one image along with the bounding boxes and labels
 def visualize_image(sample):
     image, annotations = sample['image'], sample['annotations']
@@ -46,16 +92,13 @@ def visualize_image(sample):
         draw.text((bbox[0], bbox[1]), annotation['ObjectClassName'], fill="white")
     image.show()
 
-# Loading images and labels from the directory
-images_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/images'
-labels_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/labels/json'
-dataset = LoadingBMWDataset(images_dir, labels_dir)
-
 # Function showing 5 pictures
-def visualize_images(dataset, num_images=5):
+def visualize_images(dataloader, num_images=5):
     for i in range(num_images):
         sample = dataset[i]  # Get the ith sample
         visualize_image(sample, i)
 
 # Execution of the above functions to visualize the images and labels, uncomment to visualize the images with their labels
 # visualize_images(dataset, num_images=5)
+
+'''

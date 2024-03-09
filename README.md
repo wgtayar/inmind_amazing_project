@@ -2,6 +2,8 @@
 ### This project focuses on the application of computer vision and neural networs
 
 ## Contents
+### Requirements
+<br> REQUIREMENTS FILE TO BE ADDED </br>
 ### Object Detection Models
 #### Training Data
 <br> LIST OF THE TRAINED MODELS TO BE ADDED </br>
