@@ -42,7 +42,6 @@ class ObjectDetectionDataset(Dataset):
             img = self.transform(img)
         return img, boxes, labels, class_names
     '''
-    
     # Use this version of the function when there is a need to use a YOLOV7 model
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_names[idx])
