@@ -35,6 +35,10 @@ class LoadingBMWDataset(Dataset):
         
         return sample
 
+'''
+####################################################################################################################
+###COMMENTING THIS SECTION OUT TO AVOID RUNNING THE CODE WHEN IMPORTING, UNCOMMENT TO VISUALIZE IMAGES AND LABELS###
+####################################################################################################################
 # Function to visualize one image along with the bounding boxes and labels
 def visualize_image(sample, idx):
     image, annotations = sample['image'], sample['annotations']
@@ -59,3 +63,4 @@ def visualize_images(dataset, num_images=5):
 
 # Execution of the above functions to visualize the images and labels
 visualize_images(dataset, num_images=5)
+'''
