@@ -1,0 +1,83 @@
+[
+    {
+        "Id": 8026,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 136,
+        "Top": 273,
+        "Right": 761,
+        "Bottom": 403
+    },
+    {
+        "Id": 8035,
+        "ObjectClassName": "bin",
+        "ObjectClassId": 5,
+        "Left": 904,
+        "Top": 233,
+        "Right": 1021,
+        "Bottom": 401
+    },
+    {
+        "Id": 8036,
+        "ObjectClassName": "bin",
+        "ObjectClassId": 5,
+        "Left": 327,
+        "Top": 279,
+        "Right": 389,
+        "Bottom": 361
+    },
+    {
+        "Id": 8037,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 26,
+        "Top": 311,
+        "Right": 165,
+        "Bottom": 336
+    },
+    {
+        "Id": 8043,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 2,
+        "Top": 311,
+        "Right": 117,
+        "Bottom": 337
+    },
+    {
+        "Id": 8045,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1009,
+        "Top": 310,
+        "Right": 1167,
+        "Bottom": 339
+    },
+    {
+        "Id": 8056,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 607,
+        "Top": 249,
+        "Right": 684,
+        "Bottom": 359
+    },
+    {
+        "Id": 8057,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 482,
+        "Top": 244,
+        "Right": 714,
+        "Bottom": 360
+    },
+    {
+        "Id": 8058,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 0,
+        "Top": 305,
+        "Right": 183,
+        "Bottom": 381
+    }
+]

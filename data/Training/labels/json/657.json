@@ -1,0 +1,47 @@
+[
+    {
+        "Id": 11286,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 283,
+        "Top": 269,
+        "Right": 479,
+        "Bottom": 332
+    },
+    {
+        "Id": 11287,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1223,
+        "Top": 359,
+        "Right": 1279,
+        "Bottom": 460
+    },
+    {
+        "Id": 11289,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 583,
+        "Top": 193,
+        "Right": 686,
+        "Bottom": 389
+    },
+    {
+        "Id": 11291,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 0,
+        "Top": 402,
+        "Right": 167,
+        "Bottom": 705
+    },
+    {
+        "Id": 11292,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 915,
+        "Top": 411,
+        "Right": 1279,
+        "Bottom": 719
+    }
+]

@@ -1,0 +1,101 @@
+[
+    {
+        "Id": 27216,
+        "ObjectClassName": "bin",
+        "ObjectClassId": 5,
+        "Left": 438,
+        "Top": 317,
+        "Right": 507,
+        "Bottom": 415
+    },
+    {
+        "Id": 27219,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 0,
+        "Top": 361,
+        "Right": 155,
+        "Bottom": 414
+    },
+    {
+        "Id": 27221,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 0,
+        "Top": 430,
+        "Right": 107,
+        "Bottom": 500
+    },
+    {
+        "Id": 27223,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 0,
+        "Top": 579,
+        "Right": 223,
+        "Bottom": 719
+    },
+    {
+        "Id": 27227,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1,
+        "Top": 329,
+        "Right": 144,
+        "Bottom": 363
+    },
+    {
+        "Id": 27229,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 13,
+        "Top": 384,
+        "Right": 174,
+        "Bottom": 452
+    },
+    {
+        "Id": 27231,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 950,
+        "Top": 301,
+        "Right": 1071,
+        "Bottom": 329
+    },
+    {
+        "Id": 27264,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 583,
+        "Top": 269,
+        "Right": 714,
+        "Bottom": 370
+    },
+    {
+        "Id": 27265,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 981,
+        "Top": 458,
+        "Right": 1115,
+        "Bottom": 631
+    },
+    {
+        "Id": 27266,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 632,
+        "Top": 444,
+        "Right": 787,
+        "Bottom": 609
+    },
+    {
+        "Id": 27267,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 7,
+        "Left": 963,
+        "Top": 619,
+        "Right": 1129,
+        "Bottom": 719
+    }
+]

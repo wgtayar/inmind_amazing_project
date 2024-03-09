@@ -1,0 +1,119 @@
+[
+    {
+        "Id": 5099,
+        "ObjectClassName": "bin",
+        "ObjectClassId": 11,
+        "Left": 1129,
+        "Top": 230,
+        "Right": 1197,
+        "Bottom": 317
+    },
+    {
+        "Id": 5101,
+        "ObjectClassName": "bin",
+        "ObjectClassId": 11,
+        "Left": 1204,
+        "Top": 229,
+        "Right": 1273,
+        "Bottom": 316
+    },
+    {
+        "Id": 5105,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 319,
+        "Top": 201,
+        "Right": 427,
+        "Bottom": 227
+    },
+    {
+        "Id": 5118,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 855,
+        "Top": 227,
+        "Right": 975,
+        "Bottom": 256
+    },
+    {
+        "Id": 5120,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 627,
+        "Top": 224,
+        "Right": 712,
+        "Bottom": 260
+    },
+    {
+        "Id": 5125,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 369,
+        "Top": 227,
+        "Right": 468,
+        "Bottom": 255
+    },
+    {
+        "Id": 5127,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 435,
+        "Top": 240,
+        "Right": 566,
+        "Bottom": 275
+    },
+    {
+        "Id": 5129,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 0,
+        "Top": 259,
+        "Right": 152,
+        "Bottom": 299
+    },
+    {
+        "Id": 5131,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 152,
+        "Top": 221,
+        "Right": 285,
+        "Bottom": 252
+    },
+    {
+        "Id": 5163,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1004,
+        "Top": 221,
+        "Right": 1125,
+        "Bottom": 255
+    },
+    {
+        "Id": 5165,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 736,
+        "Top": 230,
+        "Right": 858,
+        "Bottom": 263
+    },
+    {
+        "Id": 5194,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 9,
+        "Left": 352,
+        "Top": 271,
+        "Right": 672,
+        "Bottom": 443
+    },
+    {
+        "Id": 5196,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 9,
+        "Left": 512,
+        "Top": 391,
+        "Right": 642,
+        "Bottom": 457
+    }
+]

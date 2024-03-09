@@ -1,0 +1,146 @@
+[
+    {
+        "Id": 30923,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 928,
+        "Top": 0,
+        "Right": 998,
+        "Bottom": 39
+    },
+    {
+        "Id": 30925,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 675,
+        "Top": 33,
+        "Right": 795,
+        "Bottom": 66
+    },
+    {
+        "Id": 30930,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 877,
+        "Top": 62,
+        "Right": 1008,
+        "Bottom": 98
+    },
+    {
+        "Id": 30932,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1153,
+        "Top": 167,
+        "Right": 1279,
+        "Bottom": 220
+    },
+    {
+        "Id": 30933,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 883,
+        "Top": 121,
+        "Right": 1016,
+        "Bottom": 178
+    },
+    {
+        "Id": 30937,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 649,
+        "Top": 82,
+        "Right": 776,
+        "Bottom": 129
+    },
+    {
+        "Id": 30939,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 495,
+        "Top": 123,
+        "Right": 648,
+        "Bottom": 169
+    },
+    {
+        "Id": 30942,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 259,
+        "Top": 115,
+        "Right": 405,
+        "Bottom": 161
+    },
+    {
+        "Id": 30944,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 477,
+        "Top": 60,
+        "Right": 607,
+        "Bottom": 97
+    },
+    {
+        "Id": 30946,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1121,
+        "Top": 43,
+        "Right": 1249,
+        "Bottom": 75
+    },
+    {
+        "Id": 30950,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 817,
+        "Top": 3,
+        "Right": 911,
+        "Bottom": 37
+    },
+    {
+        "Id": 30951,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 605,
+        "Top": 26,
+        "Right": 702,
+        "Bottom": 54
+    },
+    {
+        "Id": 30957,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 1058,
+        "Top": 69,
+        "Right": 1169,
+        "Bottom": 109
+    },
+    {
+        "Id": 30961,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 991,
+        "Top": 161,
+        "Right": 1155,
+        "Bottom": 212
+    },
+    {
+        "Id": 30965,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 9,
+        "Left": 336,
+        "Top": 291,
+        "Right": 650,
+        "Bottom": 521
+    },
+    {
+        "Id": 30967,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 9,
+        "Left": 445,
+        "Top": 436,
+        "Right": 647,
+        "Bottom": 542
+    }
+]

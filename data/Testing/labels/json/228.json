@@ -1,0 +1,29 @@
+[
+    {
+        "Id": 23301,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 185,
+        "Top": 0,
+        "Right": 415,
+        "Bottom": 45
+    },
+    {
+        "Id": 23305,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 4,
+        "Left": 927,
+        "Top": 0,
+        "Right": 1119,
+        "Bottom": 22
+    },
+    {
+        "Id": 23307,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 9,
+        "Left": 0,
+        "Top": 410,
+        "Right": 339,
+        "Bottom": 719
+    }
+]
