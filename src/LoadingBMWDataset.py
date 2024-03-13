@@ -22,7 +22,9 @@ class ObjectDetectionDataset(Dataset):
         return len(self.img_names)
     
     '''
-    # Use this version of the function when data visualization is desired
+    ##################################################################################################
+    #               Use this version of the function when data visualization is desired              #
+    ##################################################################################################
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_names[idx])
         img = read_image(img_path).float() / 255.0  # Normalize to [0, 1]
@@ -82,7 +84,11 @@ annotations_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inm
 # transform = Compose([ToTensor()])
 transform = None
 train_dataset = ObjectDetectionDataset(img_dir, annotations_dir, transform=transform)
-train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True)
+train_loader = DataLoader(dataset=train_dataset, 
+                          batch_size=4,  # Adjust the batch size according to your system's capability
+                          shuffle=True,  # Shuffle the data to ensure random distribution
+                          num_workers=4,  # Parallelize data loading (adjust based on your hardware)
+                          collate_fn=None)
 
 def visualize_sample(img, boxes, class_names):
     plt.figure(figsize=(10, 10))
