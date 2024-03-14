@@ -175,10 +175,25 @@ YAML files play a crucial role in configuring the YOLOv7 model for training and 
 
 By carefully managing and utilizing YAML files, you can effectively control the behavior of the YOLOv7 model, optimizing it for your specific object detection tasks.
 
-
 ## References
 
-The following references have provided invaluable insights and methodologies that have informed the development of this project:
+This project has been informed and inspired by a variety of resources, ranging from technical guides to academic research. Below is a list of references that have contributed to the development and understanding of the technologies and methodologies used in this project:
 
-- (Place your references here. Each reference should be properly cited according to the desired citation style.)
+1. Markdown Guide - Hacks: [https://www.markdownguide.org/hacks/](https://www.markdownguide.org/hacks/)
+2. He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778). [https://link.springer.com/chapter/10.1007/978-3-319-46448-0_2](https://link.springer.com/chapter/10.1007/978-3-319-46448-0_2)
+3. How to Train YOLOv7 on Custom Data - Paperspace Blog: [https://blog.paperspace.com/train-yolov7-custom-data/](https://blog.paperspace.com/train-yolov7-custom-data/)
+4. Fine-tuning YOLOv7 on a Custom Dataset - LearnOpenCV: [https://learnopencv.com/fine-tuning-yolov7-on-custom-dataset/](https://learnopencv.com/fine-tuning-yolov7-on-custom-dataset/)
+5. Understanding Git Push and 'origin' - Warp Dev: [https://www.warp.dev/terminus/understanding-git-push-origin](https://www.warp.dev/terminus/understanding-git-push-origin)
+6. Online Markdown Editor - TutorialsPoint: [https://www.tutorialspoint.com/online_markdown_editor.php](https://www.tutorialspoint.com/online_markdown_editor.php)
+7. How to Train a Custom Object Detection Model with YOLOv7 - Analytics Vidhya: [https://www.analyticsvidhya.com/blog/2022/08/how-to-train-a-custom-object-detection-model-with-yolov7/](https://www.analyticsvidhya.com/blog/2022/08/how-to-train-a-custom-object-detection-model-with-yolov7/)
+8. Git Documentation: [https://git-scm.com/docs](https://git-scm.com/docs)
+9. Girshick, R., Donahue, J., Darrell, T., & Malik, J. (2014). Rich feature hierarchies for accurate object detection and semantic segmentation. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 580-587).
+
+### Additional Resources on ResNet and Custom Architectures
+
+- Implementing ResNet from Scratch: A comprehensive guide to building a Residual Network model from the ground up. (Placeholder for a real link)
+- "Deep Residual Learning for Image Recognition" by Kaiming He et al. - This paper introduces the concept of deep residual learning and presents the ResNet architecture, laying the foundation for many modern deep learning approaches to computer vision. [https://arxiv.org/abs/1512.03385](https://arxiv.org/abs/1512.03385)
+
+Please note: While direct links for creating a ResNet model from scratch are provided as placeholders, they can be replaced with actual resources or tutorials that you find most instructive and aligned with the methodologies applied in your project.
+
 
