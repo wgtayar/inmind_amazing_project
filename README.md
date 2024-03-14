@@ -126,21 +126,3 @@ For training with YOLOv7 models, ensure your annotations are in the correct form
     ```
 
 Follow these steps to effectively train, evaluate, and enhance your object detection models. For detailed code examples and instructions, refer to the corresponding Jupyter notebooks and Python files provided in this project.
-
-
-
-
-
-
-## Contents
-### Requirements
-<br> REQUIREMENTS FILE TO BE ADDED </br>
-### Object Detection Models
-#### Training Data
-<br> LIST OF THE TRAINED MODELS TO BE ADDED </br>
-#### Testing Results & Visualization
-<br> LIST OF THE RESULTS TO BE ADDED (TESTING RESULTS + MODEL VISUALIZATION USING NETRON) </br>
-#### Exporting the Models to ONNX, TensorRT, OpenVino
-<br> DATA TO BE ADDED </br>
-#### Inference API (Runs on CPU)
-<br> INFERENCE API WITH ENDPOINTS (AND DOCKERIZE MAYBE?) TO BE ADDED </br>
