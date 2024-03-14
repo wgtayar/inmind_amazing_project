@@ -66,8 +66,8 @@ class CustomObjectDetectionDataset(Dataset):
         if len(boxes) == 0:
             # Log the issue and provide a default box if necessary
             print(f"No boxes found for image: {self.img_names[idx]}")
-            boxes = [[0, 0, 1, 1]]  # A default dummy box
-            labels = [0]  # A default dummy label
+            boxes = torch.zeros((0, 4), dtype=torch.float32)
+            labels = torch.zeros(0, dtype=torch.int64)
 
         # Convert boxes to a tensor
         boxes = torch.as_tensor(boxes, dtype=torch.float32)
