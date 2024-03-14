@@ -126,3 +126,59 @@ For training with YOLOv7 models, ensure your annotations are in the correct form
     ```
 
 Follow these steps to effectively train, evaluate, and enhance your object detection models. For detailed code examples and instructions, refer to the corresponding Jupyter notebooks and Python files provided in this project.
+
+## ONNX Models
+
+The ONNX models used in this project are available for download from the following OneDrive folder. These models are optimized for fast inference and can be deployed across a variety of platforms.
+
+[Download ONNX Models from OneDrive](https://1drv.ms/u/s!Aiat635zdKFsgotiJsqacOBhVJuJvw?e=6IFJrg)
+
+## CustomResNet Model Architecture
+
+The CustomResNet model extends a pre-trained ResNet50 model by integrating custom layers designed to enhance object detection capabilities. This architecture aims to leverage the robust feature extraction capabilities of ResNet50 while tailoring the model's head for specific object detection tasks.
+
+### Architecture Overview
+
+- **Base Model**: ResNet50, known for its deep residual learning framework, which facilitates training of deeper networks by addressing the vanishing gradient problem.
+- **Custom Layers**: Sequential layers have been added to the model's head, including ReLU-activated fully connected layers, aiming at refining the feature representations for object detection.
+
+### Inspiration and References
+
+This approach draws inspiration from the following papers, which explore enhancements to convolutional neural network architectures for improved performance in object detection tasks:
+
+- He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).
+- Girshick, R., Donahue, J., Darrell, T., & Malik, J. (2014). Rich feature hierarchies for accurate object detection and semantic segmentation. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 580-587).
+
+These works demonstrate the effectiveness of deep residual learning and feature hierarchies in object recognition, principles that underpin the design of our CustomResNet model.
+
+
+## Utilizing YAML Files with YOLOv7
+
+YAML files play a crucial role in configuring the YOLOv7 model for training and inference. These files specify model parameters, paths to datasets, and other configuration settings that ensure the model is trained with the correct data and hyperparameters.
+
+### Steps to Use YAML Files:
+
+1. **Configuration**: Edit the YAML file to include the correct paths to your training and validation datasets. Additionally, set any model-specific parameters such as input size, number of classes, and hyperparameters.
+
+2. **Training**: When initiating the training process, pass the YAML file as an argument to specify the configuration to be used. Example command:
+
+    ```bash
+    python train.py --cfg path_to_your_yaml_file.yaml
+    ```
+
+3. **Inference**: Similarly, for inference, ensure the YAML file used for training is referenced to maintain consistency in model behavior and performance.
+
+### Best Practices:
+
+- **Documentation**: Clearly document any changes made to the default configuration to facilitate reproducibility.
+- **Version Control**: Keep versions of your YAML configurations to track modifications over time and experiment with different settings.
+
+By carefully managing and utilizing YAML files, you can effectively control the behavior of the YOLOv7 model, optimizing it for your specific object detection tasks.
+
+
+## References
+
+The following references have provided invaluable insights and methodologies that have informed the development of this project:
+
+- (Place your references here. Each reference should be properly cited according to the desired citation style.)
+
