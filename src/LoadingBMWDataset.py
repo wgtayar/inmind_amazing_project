@@ -1,117 +1,81 @@
 import os
+import cv2
 import json
 import torch
-from torch.utils.data import Dataset, DataLoader
+import albumentations as A
+from torch.utils.data import Dataset
 from torchvision.io import read_image
-from torchvision.transforms import Compose, ToTensor
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
+import torchvision.transforms as transforms
+from albumentations.pytorch import ToTensorV2
+import torchvision.models.detection as detection
+from torchvision.transforms import Compose, Resize, ToTensor, Normalize
 
-class ObjectDetectionDataset(Dataset):
-    def __init__(self, img_dir, annotation_dir, transform=None, img_names=None):
+
+class CustomObjectDetectionDataset(Dataset):
+    def __init__(self, img_dir, annotation_dir, transform=None):
         self.img_dir = img_dir
         self.annotation_dir = annotation_dir
-        self.transform = transform
-        if img_names is None:
-            self.img_names = [img_name for img_name in os.listdir(img_dir) if img_name.endswith('.jpg')]
-        else:
-            self.img_names = img_names
+        self.img_names = [img_name for img_name in os.listdir(img_dir) if img_name.endswith('.jpg')]
         
+        # Define a default transformation if none is provided
+        if transform is None:
+            self.transform = A.Compose([
+                A.Resize(224, 224),
+                A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+                ToTensorV2()  # Converts image to PyTorch tensor
+            ], bbox_params=A.BboxParams(format='pascal_voc', label_fields=['labels']))
+        else:
+            self.transform = transform
 
     def __len__(self):
         return len(self.img_names)
-    
-    '''
-    ##################################################################################################
-    #               Use this version of the function when data visualization is desired              #
-    ##################################################################################################
+
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_names[idx])
-        img = read_image(img_path).float() / 255.0  # Normalize to [0, 1]
+        # Load an image with OpenCV
+        img = cv2.imread(img_path)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB format
+        
+        height, width, _ = img.shape
+
         annotation_file = os.path.join(self.annotation_dir, self.img_names[idx].replace('.jpg', '.json'))
         with open(annotation_file) as f:
             annotations = json.load(f)
+        
         boxes = []
         labels = []
-        class_names = []  # List to hold class names
+
         for annotation in annotations:
-            boxes.append([annotation['Left'], annotation['Top'], annotation['Right'], annotation['Bottom']])
+            x_min = annotation['Left'] / width
+            y_min = annotation['Top'] / height
+            x_max = annotation['Right'] / width
+            y_max = annotation['Bottom'] / height
+            boxes.append([x_min, y_min, x_max, y_max])
             labels.append(annotation['ObjectClassId'])
-            class_names.append(annotation['ObjectClassName'])  # Append class name
-        boxes = torch.tensor(boxes, dtype=torch.float32)
-        labels = torch.tensor(labels, dtype=torch.int64)
-        if self.transform:
-            img = self.transform(img)
-        return img, boxes, labels, class_names
-    '''
-    # Use this version of the function when there is a need to use a YOLOV7 model
-    def __getitem__(self, idx):
-        img_path = os.path.join(self.img_dir, self.img_names[idx])
-        img = read_image(img_path).float() / 255.0
-        annotation_file = os.path.join(self.annotation_dir, self.img_names[idx].replace('.jpg', '.txt'))
-        
-        boxes = []
-        labels = []
-        with open(annotation_file) as f:
-            for line in f.readlines():
-                class_id, x_center, y_center, width, height = map(float, line.split())
-                labels.append(int(class_id))
-                # Convert YOLO format back to [left, top, right, bottom]
-                half_width, half_height = width / 2, height / 2
-                left = x_center - half_width
-                top = y_center - half_height
-                right = x_center + half_width
-                bottom = y_center + half_height
-                boxes.append([left, top, right, bottom])
-                
+
         boxes = torch.tensor(boxes, dtype=torch.float32)
         labels = torch.tensor(labels, dtype=torch.int64)
         
+        # Apply transformations
         if self.transform:
-            img = self.transform(img)
+            transformed = self.transform(image=img, bboxes=boxes, labels=labels)
+            img = transformed['image']
+            boxes = transformed['bboxes']
+            labels = transformed['labels']
         
-        return img, boxes, labels
+        if len(boxes) == 0:
+            # Log the issue and provide a default box if necessary
+            print(f"No boxes found for image: {self.img_names[idx]}")
+            boxes = [[0, 0, 1, 1]]  # A default dummy box
+            labels = [0]  # A default dummy label
 
+        # Convert boxes to a tensor
+        boxes = torch.as_tensor(boxes, dtype=torch.float32)
+        # Format the target dictionary
 
-
-img_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/images'
-# For labels when loading the data from the JSON files
-#annotations_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/labels/json'
-
-# For labels when loading the data from the txt files
-annotations_dir = '/home/wgt/Desktop/InMind Academy/AI_Track/Amazing_Project/inmind_amazing_project/data/Training/labels/yolo'
-
-# transform = Compose([ToTensor()])
-transform = None
-train_dataset = ObjectDetectionDataset(img_dir, annotations_dir, transform=transform)
-train_loader = DataLoader(dataset=train_dataset, 
-                          batch_size=4,  # Adjust the batch size according to your system's capability
-                          shuffle=True,  # Shuffle the data to ensure random distribution
-                          num_workers=4,  # Parallelize data loading (adjust based on your hardware)
-                          collate_fn=None)
-
-def visualize_sample(img, boxes, class_names):
-    plt.figure(figsize=(10, 10))
-    plt.imshow(img.permute(1, 2, 0))
-    ax = plt.gca()
-    for box, class_name in zip(boxes, class_names):  # Use class_name for display
-        rect = patches.Rectangle((box[0], box[1]), box[2]-box[0], box[3]-box[1], linewidth=2, edgecolor='r', facecolor='none')
-        ax.add_patch(rect)
-        ax.text(box[0], box[1], class_name, color='white', fontsize=12, bbox=dict(facecolor='red', alpha=0.5))  # Display class name
-    plt.show()
-
-
-def visualize_samples(data_loader, num_samples=5):
-    visualized_samples = 0
-    for images, boxes, labels, class_names in data_loader:  # Now includes class_names
-        for i in range(images.size(0)):
-            if visualized_samples >= num_samples:
-                break
-            visualize_sample(images[i], boxes[i], class_names[i])  # Pass class_names[i] for visualization
-            visualized_samples += 1
-        if visualized_samples > num_samples:
-            break
-
-
-# Visualizing the data, to be used with the first version of the __getitem__ function
-# visualize_samples(train_loader, 5)
+        
+        target = {}
+        target['boxes'] = boxes
+        target['labels'] = torch.tensor(labels, dtype=torch.int64)
+        
+        return img, target
