@@ -8,7 +8,7 @@ Welcome to the inmind.ai_amazing_project's repository.
 This project is an (almost) cutting-edge solution developed to tackle the challenges of object detection within digital images. 
 Leveraging state-of-the-art machine learning techniques and architectures, including YOLOv7 and custom PyTorch models, this system is designed to significantly enhance our capabilities in identifying and categorizing objects across various scenarios and datasets.
 
-This _amazing_ project encompasses the entire pipeline of object detection tasks—from dataset preparation and augmentation to training robust models and deploying them for real-time inference. The solutions developed here demonstrate our commitment to advancing the field of computer vision, and lay a solid foundation for future innovations, to ultimately combine computer vision with <font color="red"> *robotics* </font>.
+This _amazing_ project encompasses the entire pipeline of object detection tasks—from dataset preparation and augmentation to training robust models and deploying them for real-time inference. The solutions developed here demonstrate our commitment to advancing the field of computer vision, and lay a solid foundation for future innovations, to ultimately combine computer vision with <font color="red">*robotics*</font>.
 
 This documentation provides a comprehensive guide to the project, including setup instructions, feature highlights, usage examples, and insights into the technologies we've employed. Our goal is to offer a clear overview of the project's capabilities and facilitate its adoption and further development.
 
@@ -127,9 +127,17 @@ For training with YOLOv7 models, ensure your annotations are in the correct form
 
 Follow these steps to effectively train, evaluate, and enhance your object detection models. For detailed code examples and instructions, refer to the corresponding Jupyter notebooks and Python files provided in this project.
 
+## Training Metrics
+
+Below are the TensorBoard screenshots demonstrating the training metrics and loss curves for the Yolov7 model training/
+
+![Training Metrics](/home/wgt/Desktop/Pics to the README/Screenshot from 2024-03-14 14-26-25.jpg)
+
+![Training Loss Curve](/home/wgt/Desktop/Pics to the README/Screenshot from 2024-03-14 14-26-35.jpg)
+
 ## ONNX Models
 
-The ONNX models used in this project are available for download from the following OneDrive folder. These models are optimized for fast inference and can be deployed across a variety of platforms.
+The ONNX models used in this project are available for download from the following OneDrive folder. These models reflect the weights acquired during training for both the Yolov7 and the customResNet models. 
 
 [Download ONNX Models from OneDrive](https://1drv.ms/u/s!Aiat635zdKFsgotiJsqacOBhVJuJvw?e=6IFJrg)
 
