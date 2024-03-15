@@ -69,9 +69,9 @@ This object detection system is designed with the following capabilities:
 - **Hyperparameter Optimization**: Supports experimenting with different hyperparameters to fine-tune the models for optimal performance.
 - **Real-time Inference**: Capable of deploying trained models for real-time object detection, making it suitable for integration into live systems.
 - **Visualization Tools**: Includes tools like TensorBoard for visualizing model metrics during training, and Netron for viewing model architectures, aiding in the interpretability and analysis of model performance.
-<!-- - **Inference API**: Features a scalable API for model inference, providing endpoints for model listing, image-based detection, and returning annotated images with detected objects. -->
+- **Inference API**: Features a scalable API for model inference, providing endpoints for model listing, image-based detection, and returning annotated images with detected objects. -->
 - **Export to Inference Models**: Enables exporting trained models to formats compatible with ONNX model, facilitating deployment across different platforms.
-<!-- - **Dockerization (Optional)**: Offers the option to dockerize the inference API, simplifying deployment and scaling in production environments. -->
+**Dockerization (Optional)**: Offers the option to dockerize the inference API, simplifying deployment and scaling in production environments.
 
 ## Usage
 
@@ -182,6 +182,89 @@ YAML files play a crucial role in configuring the YOLOv7 model for training and 
 - **Version Control**: Keep versions of your YAML configurations to track modifications over time and experiment with different settings.
 
 By carefully managing and utilizing YAML files, you can effectively control the behavior of the YOLOv7 model, optimizing it for your specific object detection tasks.
+
+
+To guide users on running your Dockerized Flask app, you can create a README.md file with clear instructions. Here's a template you can use and adjust according to your project specifics:
+
+
+## Flask App Deployment with Docker
+
+This guide provides instructions on how to run the Dockerized version of the Flask app, which serves an ONNX model for object detection tasks.
+
+### Prerequisites
+
+Before proceeding, ensure you have Docker installed on your system. If you need to install Docker, follow the official documentation here: [Get Docker](https://docs.docker.com/get-docker/).
+
+### Getting Started
+
+1. **Clone the Repository**
+
+   First, clone the repository containing the Flask app and navigate into the project directory:
+
+   ```sh
+   git clone <repository_url>
+   cd <project_directory>
+   ```
+
+   Replace `<repository_url>` with the URL of your Git repository and `<project_directory>` with the name of the directory into which you cloned the repository.
+
+2. **Build the Docker Image**
+
+   From the project directory, build the Docker image using the following command:
+
+   ```sh
+   docker build -t myflaskapp .
+   ```
+
+   Here, `myflaskapp` is the name given to the Docker image. Feel free to replace it with a name of your choice.
+
+3. **Run the Docker Container**
+
+   After the image has been successfully built, run the container using:
+
+   ```sh
+   docker run -p 5000:5000 myflaskapp
+   ```
+
+   This command runs the container and maps port 5000 of the container to port 5000 on your host machine, allowing you to access the Flask app at `http://localhost:5000`.
+
+### Using the Flask App
+
+Once the app is running, you can interact with it using the following endpoints:
+
+- **List Models**: Access `http://localhost:5000/models` to get a list of available models.
+- **Make a Prediction**: Send a POST request to `http://localhost:5000/predict` with an image file to receive predicted bounding boxes and scores.
+- **Get an Image with Predictions**: Send a POST request to `http://localhost:5000/predict-image` with an image file to receive the same image with bounding boxes drawn on it.
+
+You can use tools like Postman or cURL to send POST requests. Here's an example cURL command to send an image to the prediction endpoint:
+
+```sh
+curl -X POST -F "file=@path_to_your_image.jpg" http://localhost:5000/predict
+```
+
+Replace `path_to_your_image.jpg` with the actual path to the image file you wish to analyze.
+
+### Stopping the Container
+
+To stop the running Docker container, you can use the Docker CLI. First, find the container ID using:
+
+```sh
+docker ps
+```
+
+Then, stop the container with:
+
+```sh
+docker stop <container_id>
+```
+
+Replace `<container_id>` with the actual ID of your container.
+
+### Feedback
+
+For any feedback or issues, please open an issue in the repository or submit a pull request with improvements.
+```
+
 
 ## References
 
