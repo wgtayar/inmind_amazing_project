@@ -133,7 +133,7 @@ Below are the TensorBoard screenshots demonstrating the training metrics and los
 
 ![Training Metrics](https://raw.githubusercontent.com/wgtayar/inmind_amazing_project/main/images/Screenshotfrom2024-03-1414-26-25.jpg?token=GHSAT0AAAAAACPJBBCSWCVCMYNC2RVVT4OOZPT6VAQ)
 
-![Training Loss Curve](https://github.com/wgtayar/inmind_amazing_project/tree/main/images/Screenshotfrom2024-03-1414-26-35.jpg)
+![Training Loss Curve](https://raw.githubusercontent.com/wgtayar/inmind_amazing_project/main/images/Screenshotfrom2024-03-1414-26-35.jpg?token=GHSAT0AAAAAACPJBBCSCQABNGNJ2VKCOTFSZPT6WIQ)
 
 ## ONNX Models
 
