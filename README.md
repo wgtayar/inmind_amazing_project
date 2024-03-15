@@ -129,9 +129,9 @@ Follow these steps to effectively train, evaluate, and enhance your object detec
 
 ## Training Metrics
 
-Below are the TensorBoard screenshots demonstrating the training metrics and loss curves for the Yolov7 model training/
+Below are the TensorBoard screenshots demonstrating the training metrics and loss curves for the Yolov7 model training.
 
-![Training Metrics](images/Screenshot from 2024-03-14 14-26-25.jpg)
+![Training Metrics](https://github.com/wgtayar/inmind_amazing_project/tree/main/images/Screenshot from 2024-03-14 14-26-25.jpg)
 
 ![Training Loss Curve](images/Screenshot from 2024-03-14 14-26-35.jpg)
 
