@@ -284,6 +284,4 @@ This project has been informed and inspired by a variety of resources, ranging f
 - Implementing ResNet from Scratch: A comprehensive guide to building a Residual Network model from the ground up. (Placeholder for a real link)
 - "Deep Residual Learning for Image Recognition" by Kaiming He et al. - This paper introduces the concept of deep residual learning and presents the ResNet architecture, laying the foundation for many modern deep learning approaches to computer vision. [https://arxiv.org/abs/1512.03385](https://arxiv.org/abs/1512.03385)
 
-Please note: While direct links for creating a ResNet model from scratch are provided as placeholders, they can be replaced with actual resources or tutorials that you find most instructive and aligned with the methodologies applied in your project.
-
 
