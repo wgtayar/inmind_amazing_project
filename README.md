@@ -1,4 +1,4 @@
-# ***Inmind.ai Final Project***
+# ***Inmind.ai <font color='magenta'>Amazing</font> Final Project***
 
 ## **Project Overview**
 
